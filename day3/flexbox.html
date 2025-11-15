@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Layout</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+.container {
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.section-1 { background-color: #007bff; } 
+.section-2 { background-color: #28a745; } 
+.section-3 { background-color: #dc3545; } 
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; 
+    }
+    .section {
+        flex: 1; 
+    }
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="section section-1">Section 1</div>
+        <div class="section section-2">Section 2</div>
+        <div class="section section-3">Section 3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple photo gallery</title>
+    
+<style>
+
+    .container{
+display: flex;
+        background-color:yellow;
+        justify-content: center;
+        align-items: center;
+    }
+       
+    .gallery{
+        gap:15px;
+        display: grid; 
+        grid-template-columns: repeat(3,1fr);
+        
+    
+    }
+    .gallery img{
+        width:300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+
+    }
+    
+    
+
+    
+</style>
+</head>
+<body>
+    <div class="container"container>
+        <div class="gallery">
+        <img src="pokemon.jpg">
+        <img src="pokemon.jpg">
+        <img src="pokemon.jpg">
+        <img src="pokemon.jpg">
+        <img src="pokemon.jpg">
+        <img src="pokemon.jpg">
+        </div>
+    
+    </div>
+</body>
+</html>

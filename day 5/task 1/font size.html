@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change font size</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <button id="increase">A+</button>
+    <button id="decrease">A-</button>
+    <script>
+        const heading=document.querySelector("h1");
+        const increaseBtn=document.getElementById("increase");
+        const decreaseBtn=document.getElementById("decrease");
+        increaseBtn.addEventListener("click",()=>{
+            heading.style.fontSize="50px";
+        })
+        decreaseBtn.addEventListener("click",()=>{
+            heading.style.fontSize="30px";
+        })
+
+ </script>
+</body>
+</html>
