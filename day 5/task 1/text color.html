@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text color onclick</title>
+</head>
+<body>
+    <h2 id="txt">WELCOME</h2>
+    <button onclick="changeColor('red')">RED</button>
+    <button onclick="changeColor('green')">GREEN</button>
+    <button onclick="changeColor('blue')">BLUE</button>
+    <script>
+        function changeColor(colorName){
+            document.getElementById("txt").style.color=colorName;
+        }
+    </script>
+</body>
+</html>
