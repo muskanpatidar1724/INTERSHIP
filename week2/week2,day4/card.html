@@ -1,0 +1,79 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random User Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f4f4f4;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #005fcc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img id="user-img" src="" alt="Profile">
+    <h2 id="user-name">Full Name</h2>
+    <p id="user-email">Email</p>
+
+    <button onclick="getUser()">Get New User</button>
+  </div>
+
+  <script>
+    async function getUser() {
+      const url = "https://randomuser.me/api";
+      const response = await fetch(url);
+      const data = await response.json();
+
+      const user = data.results[0];
+
+      document.getElementById("user-img").src = user.picture.large;
+      document.getElementById("user-name").innerText =
+        user.name.title + " " + user.name.first + " " + user.name.last;
+
+      document.getElementById("user-email").innerText = user.email;
+    }
+
+    
+    getUser();
+  </script>
+
+</body>
+</html>

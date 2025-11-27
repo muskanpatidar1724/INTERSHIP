@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop down</title>
+</head>
+<body>
+    <h2 id="my text">This Is Simple Text</h2>
+    <select onchange="changeFont(this.value)">
+         <option value="Arial">Arial</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Roman">Roman</option>
+          <option value="Verdana">Verdana</option>
+           <option value="Georgia">Georgia</option> 
+    </select>
+<script>
+    function changeFont(fontName){
+        document.getElementById("my text").style.fontFamily=fontName;
+    }
+</script>
+</body>
+</html>

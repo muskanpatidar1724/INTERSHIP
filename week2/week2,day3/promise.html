@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises</title>
+</head>
+<body>
+    <script>
+        const simulateFetch=new Promise((resolve,reject)=>{
+            let isOnline=true;
+            setTimeout(()=>{
+                if(isOnline)resolve("data fetched successfully");
+                else reject("network error");
+            },1500);
+        });
+        simulateFetch
+        .then(msg=> console.log(msg))
+        .catch(msg=> console.error(err));
+    </script>
+    
+</body>
+</html>
